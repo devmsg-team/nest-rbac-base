@@ -46,10 +46,10 @@ import { JwtService } from '@nestjs/jwt';
       }),
       inject: [ConfigService],
     }),
-    ThrottlerModule.forRoot({
+    ThrottlerModule.forRoot([{
       ttl: 60,
       limit: 60,
-    }),
+    }]),
     RoleModule,
   ],
   controllers: [],

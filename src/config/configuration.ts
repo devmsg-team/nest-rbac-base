@@ -8,6 +8,7 @@ export function isDev(): boolean {
 // 根据环境变量判断使用配置
 export default () => {
   const envConfig: IConfig = require(`./config.${process.env.NODE_ENV}`).default;
+  console.log(envConfig,'====>>>>envConfig')
   return envConfig;
 };
 
